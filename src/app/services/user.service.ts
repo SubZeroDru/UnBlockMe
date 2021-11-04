@@ -32,7 +32,7 @@ export class UserService {
     console.log(carNumber);
     this.uiService.toggleProgress(true);
     this.http
-      .post(`${this.baseUrl}/users`, {
+      .put(`${this.baseUrl}/users/${carNumber}`, {
         carNumber,
       })
       .subscribe((data) => {
